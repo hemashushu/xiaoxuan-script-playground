@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2024 Hemashushu <hippospark@gmail.com>, All rights reserved.
+
+ This Source Code Form is subject to the terms of
+ the Mozilla Public License version 2.0 and additional exceptions,
+ more details in file LICENSE, LICENSE.additional and CONTRIBUTING.
+-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>XiaoXuan Script Playground</title>
+
+    <!--
+    The configuration for XiaoXuan Script VM
+    -->
+    <script type="application/json" id="ans_config">
+        {
+            "vm": "./static/ans_vm.wasm",
+            "app": "./static/hello_world.ans",
+            "inline": true
+        }
+    </script>
+
+    <!--
+    By using the 'defer' attribute, the script file 'ans_loader.js'
+    is loaded in parallel, and then executed after the document is parsed.
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#defer
+    -->
+    <script defer src="./static/ans_loader.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./static/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>XiaoXuan Script Playground</h1>
+        <div class="workbench">
+            <div class="panel">
+                <div class="input">
+                    <h3>Input</h3>
+                    <form>
+                        <div class="form-cell">
+                            <label for="example">Example:</label>
+                            <select name="example">
+                                <option value="hello-world">Hello World!</option>
+                                <option value="function">Function</option>
+                                <!-- more -->
+                            </select>
+                        </div>
+                        <div class="form-cell">
+                            <textarea rows="12"></textarea>
+                        </div>
+                        <div class="form-cell">
+                            <input type="button" name="run" value="Run">
+                        </div>
+                    </form>
+                </div>
+                <div class="output">
+                    <h3>Output</h3>
+                    <div class="paper">
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="monitor">
+                <div class="assembly">
+                    <h3>Assembly</h3>
+                    <div class="paper"></div>
+                </div>
+                <div class="bytecode">
+                    <h3>Bytecode</h3>
+                    <div class="paper"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- inline XuanXuan Script -->
+    <script type="application/xiaoxuanscript">
+        function main() {
+            let output_box = document.querySelector(".output .box")
+            set_prop(output_box, "innerHTML", "hello world")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/**
+ * Copyright (c) 2024 Hemashushu <hippospark@gmail.com>, All rights reserved.
+ *
+ * This Source Code Form is subject to the terms of
+ * the Mozilla Public License version 2.0 and additional exceptions,
+ * more details in file LICENSE, LICENSE.additional and CONTRIBUTING.
+ */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.workbench {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.workbench > div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    /* max-width: 620px; */
+}
+
+.paper {
+    width: 100%;
+    height: 240px;
+    /* max-width: 620px; */
+
+}
+
+.output .paper {
+    background-color: blanchedalmond;
+}
+
+.assembly .paper {
+    background-color: beige;
+}
+
+.bytecode .paper {
+    background-color: azure;
+}
+
+.input textarea {
+    width: 100%;
+    /* max-width: 620px; */
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightsalmon;
+    background-color: antiquewhite;
+    background-color: floralwhite;
+    background-color: seashell;
+}
+
+.input textarea:focus {
+    border-style: solid;
+    border-width: 1px;
+    border-color: coral;
+    outline: none;
+    box-shadow: 0 0 8px salmon;
+}
