@@ -27,8 +27,13 @@
     By using the 'defer' attribute, the script file 'ans_loader.js'
     is loaded in parallel, and then executed after the document is parsed.
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#defer
+
+    `<script defer src="./static/ans_loader.js"></script>`
+
+    By defult, XiaoXuan Script adopts the newer approach, set attribute 'type=module'.
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
     -->
-    <script defer src="./static/ans_loader.js"></script>
+    <script type="module" src="./static/ans_loader.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./static/index.css">
 </head>

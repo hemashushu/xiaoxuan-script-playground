@@ -8,15 +8,13 @@
 # https://github.com/WebAssembly/wabt
 .PHONY: build
 build:
-	cd static && \
-	wat2wasm ans_vm.wat -o ans_vm.wasm
+	wat2wasm ans_compiler.wat -o ans_compiler.wasm
 
 # compile by wasm-tools
 # https://github.com/bytecodealliance/wasm-tools
 .PHONY: build_alt
 build_alt:
-	cd static && \
-	wasm-tools parse ans_vm.wat -o ans_vm.wasm
+	wasm-tools parse ans_compiler.wat -o ans_compiler.wasm
 
 # create local http server
 # https://github.com/http-party/http-server

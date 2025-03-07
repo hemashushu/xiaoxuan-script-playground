@@ -27,22 +27,23 @@ class AnsLoader {
         return vmExports.compile(scriptText);
     }
 
+    //
+    // for testing
+    //
     buildVMImportObject() {
-        //
-        // for testing
-        //
-        let envFetch = async (file_path) => {
-            // https://developer.mozilla.org/en-US/docs/Web/API/fetch
-            let response = await fetch(file_path);
-            return await response.text();
-        };
+
+        // let envFetch = async (file_path) => {
+        //     // https://developer.mozilla.org/en-US/docs/Web/API/fetch
+        //     let response = await fetch(file_path);
+        //     return await response.text();
+        // };
 
         let envLog = (text) => {
             console.log(text);
         };
 
         let env = {
-            fetch: envFetch,
+            // fetch: envFetch,
             log: envLog
         };
 

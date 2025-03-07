@@ -1,5 +1,5 @@
+;; mock
 (module
-    ;; (import "env" "fetch" (func $env_fetch (param $file_path i32) (result i32)))
     (import "env" "log" (func $env_log (param $text externref)))
 
     (func $compile (param $script_text externref) (result i32)

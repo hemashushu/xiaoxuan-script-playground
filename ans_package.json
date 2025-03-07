@@ -1,0 +1,8 @@
+{
+    "name": "ans_playground",
+    "version": "1.0",
+    "compiler": "1.0",
+    "modules": {
+        "main": "./main.ans"
+    }
+}
